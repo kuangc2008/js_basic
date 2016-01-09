@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react js demo</title>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+                  //不能加this
+      var MessageBox = React.createClass({
+        render : function() {
+          var messages = [];
+          for(var i=0; i<4; i++) {
+            messages.push(
+                <Submessage key={'' + i}/>
+            )
+          };
+          return (
+            <div>
+              <h1>你好世界!</h1>
+
+              {messages}
+            </div>
+          )
+        }
+      });
+
+      var Submessage = React.createClass({
+        render : function() {
+          return (
+            <div>
+              <h3>写代码很有意思</h3>
+              <Footer />
+            </div>
+          );
+
+        }
+      });
+
+      var Footer = React.createClass({
+        render : function() {
+          return (<small>因为我们用代码创造</small>);
+        }
+      });
+
+      ReactDOM.render( <MessageBox/>,
+          document.getElementById('app'),
+          function() {
+            console.log("lalala");
+          }
+      );
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react js demo</title>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      var alert = function() {
+        alert('click me');
+        console.log('click me');
+      };
+
+      var MessageBox = React.createClass({
+        render : function() {
+          return ( <h1 onClick={this.alert}>你好世界!</h1>)
+        }
+      });
+
+      ReactDOM.render( <MessageBox/>,
+          document.getElementById('app'),
+          function() {
+            console.log("lalala");
+          }
+      );
+
+    </script>
+
+  </body>
+</html>

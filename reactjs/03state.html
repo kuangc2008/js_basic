@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react js demo</title>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+                  //不能加this
+      var MessageBox = React.createClass({
+        getInitialState() {
+          return {
+            isVisiable : false,
+            titleMessage : 'hehe from kc',
+          }
+        },
+        render : function() {
+          var styleObj = {
+            display : this.state.isVisiable ? 'block' : 'none',
+          }
+          return (
+            <div>
+              <h1 style={styleObj}>{this.state.titleMessage}</h1>
+              <Submessage/>
+            </div>
+          )
+        }
+      });
+
+      var Submessage = React.createClass({
+        render : function() {
+          return (
+            <div>
+              <h3>写代码很有意思</h3>
+              <Footer />
+            </div>
+          );
+
+        }
+      });
+
+      var Footer = React.createClass({
+        render : function() {
+          return (<small>因为我们用代码创造</small>);
+        }
+      });
+
+      var hehe = ReactDOM.render( <MessageBox/>,
+          document.getElementById('app'),
+          function() {
+            console.log("lalala");
+          }
+      );
+
+    </script>
+
+  </body>
+</html>
