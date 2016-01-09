@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react js demo</title>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      var sateRecordMinxin = {
+        conponmentWillMount : function() {
+          this.oldState = [];
+        },
+        previsouState : function() {
+          return 'hehe';
+        }
+      }
+
+      var MessageBox = React.createClass({
+        mixins : [sateRecordMinxin],
+        propTypes : {
+        },
+        statics :{
+            customMethiod : function(foo) {
+              return foo === 'bar';
+            }
+        },
+        getInitialState : function() {
+          console.log('getInitialState');
+          return {};
+        },
+        render : function() {
+          console.log('render');
+          return ( <h1>你好世界!</h1>)
+        },
+        getDefaultProps : function() {
+            console.log('getDefaultProps');
+              return {};
+        },
+        componentWillMount : function() {
+          console.log('componentWillMount');
+        },
+        gaga : function() {
+          this.setState({});
+        },
+        componentDidMount: function() {
+          console.log('componentDidMount');
+          setTimeout(this.gaga, 2000);
+        },
+        componentWillReceiveProps(nextprops){
+          console.log('componentWillReceiveProps', nextprops);
+        },
+        shouldComponentUpdate(netProps, nextState) {
+          console.log('shouldComponentUpdate', arguments);
+          return true;
+        }
+      });
+
+
+      MessageBox.customMethiod('bar');
+
+      ReactDOM.render( <MessageBox/>,
+          document.getElementById('app'),
+          function() {
+            console.log("lalala");
+          }
+      );
+
+    </script>
+
+  </body>
+</html>
