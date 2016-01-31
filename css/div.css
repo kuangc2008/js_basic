@@ -1,0 +1,50 @@
+#root {
+    border-width: thin;
+    border-style: solid;
+    border-color: #007e7e;
+    width: 400px;
+    border: thin solid #00FF00;
+
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    margin-left: 20px;
+    text-align: center;
+
+    background-image: url(http://img.adbox.sina.com.cn/pic/1323779513-1449456327897.png);
+    background-repeat: repeat-x;
+
+
+    line-height: 1;
+}
+  background-color: #2a3a40;
+
+h1, h2, h3 {
+  color: : #ffff00
+}
+
+#root h2 {
+  padding: 0px 20px 30px 10px;
+  color : #00ffff
+}
+
+.cd {
+  font-style: italic;
+}
+
+.artist {
+  font-weight: bold;
+}
+
+#root a:link {
+  color : blue;
+}
+
+#root a:visited {
+  color : red;
+}
+
+#root a:hover {
+  color : yellow;
+}

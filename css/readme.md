@@ -1,4 +1,5 @@
-<h1>各种css属性<h1>
+<h1>1 各种css属性<h1>
+
 <pre>
 color : 文本颜色
 font-weight : 粗体
@@ -16,4 +17,13 @@ letter-spacing : 字母之间的间距
 font-style : 斜体文本
 list-style : 改变选项的外观
 background-image :  背景
+</pre>
+
+
+<h1>2 div span class id</h1>
+<pre>
+片段：div、内联：span
+class加入到某元素上，在css中通过 .name{} 来制定样式
+div的id，可以通过#name来制定div样式；
+还可以#name 元素来制定某些特定div下的元素
 </pre>
