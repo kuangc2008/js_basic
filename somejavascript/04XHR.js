@@ -18,3 +18,7 @@ xhr.onreadystatechange = function() {
 }
 xhr.open('get', url, true);
 xhr.send(null);
+
+
+//长连接
+//Comet 服务器推送
