@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>函数</title>
+
+</head>
+<body>
+
+<div id='first'>
+	<p>火羽凤凰 fire <i class='go'>plume</i>  <i class='go'>phoenix </i> </p>
+
+</div>
+
+</body>
+
+
+<!-- 一些元素没获取到,只需要移动到后面来 -->
+<script type="text/javascript" src="study.js"></script>
+</html>
