@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+
+<style type="text/css">
+
+	
+	
+	
+	
+	
+	
+	
+	.box span {
+		font-size: 100px;
+	}
+	
+	/*	后代会覆盖上面*/
+	div span {
+		font-size: 200px;
+	}
+	
+	.box .miss {
+		font-size: 300px;
+	}
+
+	
+	
+/*	对后代依然生效*/
+	.box {
+		font-size: 50px;
+	}
+	
+/*	对后代依然生效*/
+	div.box {
+		color: red;
+	}
+	
+	div#miss {
+		widows: 400px;
+		height: 300px;
+		background-color: yellow;
+	}
+	
+
+
+	
+	/*	子代选择器，直接子集  */
+	div>span, span, h1 {
+		font-size: 10px;
+		color: green;
+	}
+	p>span {
+		color:rgba(0,0,0,1.00);
+		font-size: 40px;
+	}
+</style>
+
+
+
+</head>
+
+<body>
+
+	<span>14期小伙帅气</span>
+
+	<h1>14期姑娘漂亮</h1>
+
+	
+	<div>
+		<p><span>我是一个兵</span></p>
+		<span>来自老百姓</span>
+
+	</div>
+
+
+
+	<div class="box">14期威武</div>
+
+	<p class="box">14期霸气</p>
+
+	<div id="miss">14期万岁</div>
+	
+	
+	<div class="box">
+
+		<p><span class="miss">14期威武2</span>
+
+		   <span>14期好人2</span>
+
+		</p>
+
+	</div>
+
+	<div class="box"><span>14霸气2</span></div>
+
+
+</body>
+</html>
