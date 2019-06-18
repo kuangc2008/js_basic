@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<style>
+	
+	body, ul ,li {
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul, li {
+		list-style: none;
+	}
+	
+	.nav {
+		width: 800px;
+		height: 40px;
+		background: pink;
+		margin: 20px auto;
+	}
+	
+	.nav ul li {
+		float: left;
+	}
+
+	.nav ul li a {
+		display: inline-block;
+		height: 40px;
+		font: 14px/40px 微软雅黑;
+		padding: 0 20px;
+		text-decoration: none;
+	}
+	
+	.nav ul li a:hover{
+		background: #aaa;
+	}
+	
+	
+	.nav2 {
+		height: 55px;
+		background: url(image/head_bg.jpg);
+		margin-top: 30px;
+		border-top: 1px solid #f00;
+	}
+	
+	.nav-con {
+		width: 1000px;
+		margin: 0 auto;
+		height: 55px;
+		position: relative;
+	}
+	
+	.nav-con ul li {
+		float:  left;
+		background: url(image/li_bg.png) no-repeat right;
+		height: 55px;
+		padding: 0 30px;
+	}
+	
+	.nav-con ul li a {
+		display: inline-block;
+		height: 55px;
+		font : 18px/55px;
+		text-decoration: none;
+		color: #000;
+	}
+	
+	.nav-con ul li a:hover{
+		color: green;
+		background: rgba(147,59,195,1.00);
+	}
+	.news {
+		position: absolute;
+		left: 30px;
+		bottom:40px;
+	}
+	
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="nav">
+	<ul>
+		<li><a href="#">百度</a></li>
+		<li><a href="#">搜狐</a></li>
+		<li><a href="#">网易</a></li>
+		<li><a href="#">360</a></li>
+	</ul>
+</div>
+
+
+	<div class="nav2">
+		<div class="nav-con">
+			<ul>
+				<li><a href="#">智能手机</a></li>
+				<li><a href="#">平板电脑</a></li>
+				<li><a href="#">百度</a></li>
+				<li><a href="#">么么么哒</a></li>
+			</ul>
+			<div class="news"><img src="image/new.png"></div>
+		</div>
+
+	</div>
+
+</body>
+</html>

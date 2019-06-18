@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<style type="text/css">
+
+	.box {
+		display: inline-block;
+		width:100px;
+		height: 100px;
+		background: #999;
+		
+		border-top-style: solid;
+		border-top-color: red;
+		border-top-width: 5px;
+		
+		border-top: red solid 5px;
+		border-left: 5px dashed green;
+		border-right: 12px dotted pink;
+	}
+	
+	table {
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		border-collapse: collapse;
+	}
+	
+	td {
+		border: 1px solid red;
+	}
+	
+	.username {
+		border: 0 none;
+		outline-style: none;
+		background: #ccc;
+		border: 1px dashed green;
+		
+	}
+	
+	.username:focus {
+		background: red;
+	}
+	.email {
+		border: 0 none;
+		outline-style: none;
+		border-bottom: 1px solid red;
+	}
+	.search {
+		border: 0 none;
+		border: 1px solid #999;
+		background: url(image/serch.jpg) no-repeat right;
+	}
+	.box2 {
+		border: 10px solid red;
+		width: 180px;
+		height: 300px;
+		padding-left: 160px;
+		padding-right: 160px;
+		background: green;
+	}
+</style>
+
+</head>
+<body>
+<div class="box">啦啦啦</div>
+
+<table cellspacing="0">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+</table>
+
+
+<label for="username">用户名:</label><input type="text" class="username" id="username"><br>
+	邮箱:<input type="text" class="email"><br>
+	搜索一下:<input type="text" class="search">
+</body>
+
+<div class="box2">
+	<img src="image/1.jpg"/>
+</div>
+</html>
