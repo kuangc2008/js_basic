@@ -1,0 +1,17 @@
+{
+  "name": "day2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "005-importObj.js",
+  "dependencies": {
+    "silly-datetime": "^0.1.2",
+    "time-formater": "^1.1.2",
+    "yao-dateutils": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
