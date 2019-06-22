@@ -4,6 +4,7 @@
   "description": "",
   "main": "005-importObj.js",
   "dependencies": {
+    "ejs": "^2.6.2",
     "formidable": "^1.2.1",
     "silly-datetime": "^0.1.2",
     "time-formater": "^1.1.2",
