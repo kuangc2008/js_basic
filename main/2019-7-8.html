@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style type="text/css">
+	.doing {
+		font-size: 18px;
+	}
+	.done {
+		color: #0f0;
+		text-decoration: line-through;
+		font-size: 18px;
+	}
+	.forever {
+		color : #00f;
+		font-size: 18px;
+	}
+
+
+</style>
+
+
+	<title>一张一弛 才能长久</title>
+
+	<script type="text/javascript">
+		window.onload = init;
+
+
+		function init () {
+			initTime();
+			initTask();
+			initNovel();
+		}	
+
+
+		function initTime() {
+			console.log("initTime");
+			n =  new Date();
+			y = n.getFullYear();
+			m = n.getMonth() + 1;
+			d = n.getDate();
+			xingqi =  (n.getDay() );
+
+			var xingqiStr;
+			switch (xingqi) {
+				case 0:
+					xingqiStr = '星期天';
+					break;
+				case 1:
+					xingqiStr = '星期一';
+					break;
+				case 2:
+					xingqiStr = '星期二';
+					break;
+				case 3:
+					xingqiStr = '星期三';
+					break;
+				case 4:
+					xingqiStr = '星期四';
+					break;
+				case 5:
+					xingqiStr = '星期五';
+					break;
+				case 6:
+					xingqiStr = '星期六';
+					break;
+			}
+
+			console.log(document.getElementById("time") );
+			document.getElementById("time").innerHTML =  '今天是' + y + '年' + m + '月' + d + '号;  '   + xingqiStr ;
+		}
+
+		function initTask() {
+
+			var p = document.createElement("p"); 
+			p.innerHTML =  '本周task';
+			document.getElementById("task").appendChild(p) ;
+
+			        var ul = document.createElement('ul');
+			        ul.setAttribute('id','proList');
+
+			           productList = [
+			           	 ['上班时间一定要珍惜',  'forever'],
+			           	  ['d8 r8推进',  'doing'],
+			           	   ['找到一个英语口语app',  'done'],
+			           	    ['nodejs 5 6 7 day',  'doing'],
+			           	     ['看一看游泳视频,周末游泳一次;    某一天跑步去地铁',  'doing']
+
+			           ];
+
+			        document.getElementById('task').appendChild(ul);
+			        productList.forEach(renderProductList);
+
+			        function renderProductList(element, index, arr) {
+			            var li = document.createElement('li');
+			            li.setAttribute('class', element[1]);
+
+			            ul.appendChild(li);
+
+			            li.innerHTML=li.innerHTML + element[0];
+			        }
+
+
+		}
+
+
+		function initNovel() {		
+
+			var p = document.createElement("p"); 
+			p.innerHTML =  '本周小说';
+			document.getElementById("novel").appendChild(p) ;
+
+			n =  new Date();	
+			xingqi =  (n.getDay() );
+
+			var productList;
+			var xingqiStr;
+			switch(xingqi) {
+				case 0:
+					break;
+				case 1:
+					xingqiStr = '星期一';
+					productList = [		
+						['我是仙凡', 'http://www.booksky.in/BookDetail.aspx?BookID=3646235'],
+						['随身带个抽奖面板', 'http://www.booksky.in/BookDetail.aspx?BookID=3716564'],
+						['黑科技算命大师', "http://www.booksky.in/BookDetail.aspx?BookID=3715267"],
+						['我有很多好习惯', ""],
+					];
+					break;
+				case 2:
+					xingqiStr = '星期二';
+					break;
+				case 3:
+					xingqiStr = '星期三';
+					break;
+				case 4:
+					xingqiStr = '星期四';
+					break;
+				case 5:
+					xingqiStr = '星期五';
+					productList = [		
+						['超神道术', ' http://www.booksky.in/BookDetail.aspx?BookID=3673688'],
+						['氪金成仙', ' http://www.booksky.in/BookDetail.aspx?BookID=3710277'],
+						['前任无双', "http://www.booksky.in/BookDetail.aspx?BookID=3711489"],
+					];
+					break;
+				case 6:
+					xingqiStr = '星期六';
+		
+					break;
+			}
+
+			        var ul = document.createElement('ul');
+			        ul.setAttribute('id','proList');
+			
+			        document.getElementById('novel').appendChild(ul);
+			        productList.forEach(renderProductList);
+
+			        function renderProductList(element, index, arr) {
+			            var li = document.createElement('li');
+			            var a = document.createElement('a');	
+			            // li.setAttribute('class', element[1]);
+			            a.setAttribute("href", element[1]);
+			            a.innerText= element[0];
+
+			            li.appendChild(a);
+			            ul.appendChild(li);
+
+			        }
+
+		}
+
+	</script>
+
+
+</head>
+<body>
+
+
+<div id=time> </div>
+<div id=task> </div>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<div id=novel> </div>
+<div id=weibo> </div>
+
+
+</body>
+</html>
