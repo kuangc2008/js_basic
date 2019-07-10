@@ -14,9 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 
 
 app.get('/copy', function (req, res)  {
+	console.dir(req.ip);
 	fs.readFile("./static/101-copy.html", function (err, data) {
-		res.writeHead(200, {"Content-Type" : "text/html;charset=utf8"});
-		res.end(data);
+		// console.log("scuccess:" +  data);
+		res.set('Content-Type', 'text/html')
+		res.status(200).send(data);
 	})
 });
 
@@ -32,7 +34,8 @@ app.post('/dopost', upload.array(), function (req, res, next) {
 });
 
 app.get('/text', function(req, res) {
-	res.end(text);
+	console.log("send text:" + text);
+	res.status(200).send(text);
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
